@@ -7,21 +7,6 @@
   background-color: #ffffff;
 }
 
-.imgcard img {
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 1;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border: 2px solid #fff;
-}
-
-.card:hover .imgcard img {
-  border-color: #DD5353;
-  transition: .7s;
-}
-
 a:hover {
   color: #DD5353;
 }
@@ -48,6 +33,10 @@ ul li.active a {
   border-bottom: 15px;
   cursor: pointer;
 }
+
+.card-body {
+  padding: 2rem;
+ }
 
 .img1 img {
   height: 200px;
@@ -139,10 +128,6 @@ ul li.active a {
 .icon .fa-arrow-left{
   color: #DD5353;
 }
-.kembali:hover {
-  background: #DD5353;
-}
-
 .icon .fa-arrow-right{
   color: #DD5353;
 }
@@ -150,55 +135,99 @@ ul li.active a {
   background: #DD5353;
 }
 
-
 #kontak {
   color: #ffffff;
   padding-top: 5rem;
   background-color: #DD5353;
 }
 
+/* Progress bar dan Form */
 #form {
-  background-color: #DD5353;
   padding-top: 7rem;
+  padding-bottom: 5rem;
 }
 
-.index-btn-wrapper{
+:root {
+  --primary-color: #DD5353;
+}
+
+.progressbar {
+  position: relative;
   display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2rem 0 4rem;
 }
 
-.index-btn{
-  margin: 20px 15px 0 0;
-  background: #DD5353;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 17px;
-  cursor: pointer;
+.progressbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #dcdcdc;
+  z-index: -1;
+}
+
+.progress {
+  background-color: var(--primary-color);
+  width: 0%;
   transition: 0.3s;
-  border-radius: 5px;
 }
 
-.index-btn:hover{
-  opacity: 0.8;
-}
-
-.step {
-  text-align: center;
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
-  margin: 0 10px;
-  color: white;
-  background: #DD5353;
+.progress-step {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #dcdcdc;
   border-radius: 50%;
-  display: inline-block;
-  opacity: 0.25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
 
-.bi {
-  color: #ffffff;
-  font-size: 2rem;
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.progress-step-active {
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+}
+
+.form-step {
+  display: none;
+  transform-origin: top;
+  animation: animate 0.5s;
+}
+
+.form-step-active {
+  display: block;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+.btn:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
 }
 
 /* BMI Calculator */
@@ -234,18 +263,6 @@ ul li.active a {
   width: 60%;
   text-align: center;
   font-size: 28px;
-}
-
-button#hitung {
-  color: #fff;
-  background: #DD5353;
-  font-size: 16px;
-  border-radius: 12px;
-  padding: 12px 0;
-  width: 100%;
-  outline: none;
-  border: none;
-  transition: all 0.2s ease;
 }
 
 .hasil {
