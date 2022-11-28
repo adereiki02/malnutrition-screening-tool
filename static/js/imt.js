@@ -10,7 +10,7 @@ btn.addEventListener("click", function () {
   }
 
   // IMT = bb dalam KG / (tb dalam m * tb dalam m)
-
+  
   tb = tb / 100;
 
   let IMT = bb / (tb * tb);
