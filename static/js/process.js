@@ -1,28 +1,47 @@
-// Default tab
-$(".tab").css("display", "none");
-$("#tab-1").css("display", "block");
+const prevBtns = document.querySelectorAll(".btn-prev");
+const nextBtns = document.querySelectorAll(".btn-next");
+const progress = document.getElementById("progress");
+const formSteps = document.querySelectorAll(".form-step");
+const progressSteps = document.querySelectorAll(".progress-step");
 
-function run(hideTab, showTab){
-  if(hideTab < showTab){ // If not press previous button
-    // Validation if press next button
-    var currentTab = 0;
-    x = $('#tab-'+hideTab);
-    y = $(x).find("input")
-    for (i = 0; i < y.length; i++){
-      if (y[i].value == ""){
-        $(y[i]).css("background", "#ffdddd");
-        return false;
-      }
+let formStepsNum = 0;
+
+nextBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    formStepsNum++;
+    updateFormSteps();
+    updateProgressbar();
+  });
+});
+
+prevBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    formStepsNum--;
+    updateFormSteps();
+    updateProgressbar();
+  });
+});
+
+function updateFormSteps() {
+  formSteps.forEach((formStep) => {
+    formStep.classList.contains("form-step-active") &&
+      formStep.classList.remove("form-step-active");
+  });
+
+  formSteps[formStepsNum].classList.add("form-step-active");
+}
+
+function updateProgressbar() {
+  progressSteps.forEach((progressStep, idx) => {
+    if (idx < formStepsNum + 1) {
+      progressStep.classList.add("progress-step-active");
+    } else {
+      progressStep.classList.remove("progress-step-active");
     }
-  }
+  });
 
-  // Progress bar
-  for (i = 1; i < showTab; i++){
-    $("#step-"+i).css("opacity", "2");
-  }
+  const progressActive = document.querySelectorAll(".progress-step-active");
 
-  // Switch tab
-  $("#tab-"+hideTab).css("display", "none");
-  $("#tab-"+showTab).css("display", "block");
-  $("input").css("background", "#fff");
+  progress.style.width =
+    ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
 }
