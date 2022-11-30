@@ -41,12 +41,12 @@
 
       <!-- Form -->
       <section id="form">
-            <div class="container">
+            <div class="container" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
                 <div class="row justify-content-center">
                     <div class="col-md-8 mb-3">
-                        <div class="card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                        <div class="card">
                         <div class="card-body">
-                          <form action="something.php" method="POST" class="form" onsubmit="return submitForm(this);">
+                          <form action="" method="POST" class="form" onsubmit="return submitForm(this);">
                             <h1 class="text-center">Skrining Form</h1>
                             <!-- Progress bar -->
                             <div class="progressbar">
@@ -96,7 +96,7 @@
                               </div>
                       
                               <div class="mb-3">
-                                <label for="tanggal" class="form-label">Tanggal</label>
+                                <label for="tanggal" class="form-label">Tanggal Lahir</label>
                                 <input type="date" class="form-control" name="tanggal" id="tanggal" />
                               </div>
                               <hr>
@@ -110,17 +110,18 @@
                                 <div class="p-2 bd-highlight">A.</div>
                                 <div class="p-2 bd-highlight">Apakah asupan makanan berkurang selama 3 bulan terakhir karena kehilangan nafsu makan, gangguan pencernaan, kesulitan mengunyah atau menelan?</div>
                               </div>
-                              <div class="d-flex flex-row bd-highlight fw-bold mb-3">
+                              <div class="d-flex flex-row bd-highlight mb-3">
                                 <div class="p-3 bd-highlight"></div>
                                 <div class="p-2 bd-highlight">
-                                  <div class="input-group mb-3">
-                                    <select class="form-select form-select-sm" aria-label="Default select example" length="7">
-                                      <option selected>Pilih Jawaban</option>
-                                      <option value="0">0 = asupan makanan sangat berkurang</option>
-                                      <option value="1">1 = asupan makanan agak berkurang</option>
-                                      <option value="2">2 = asupan makanan tidak berkurang</option>
-                                    </select>
-                                  </div>
+                                  0 = asupan makanan sangat berkurang <br> 
+                                  1 = asupan makanan agak berkurang <br> 
+                                  2 = asupan makanan tidak berkurang <br> 
+                                </div>
+                              </div>
+                              <div class="d-flex flex-row bd-highlight mb-3">
+                                <div class="p-3 bd-highlight"></div>
+                                <div class="p-2 bd-highlight">
+                                  <input type="number" class="form-control" id="num1" placeholder="isikan skor. contoh : 0">
                                 </div>
                               </div>
                               <hr>
@@ -128,18 +129,19 @@
                                 <div class="p-2 bd-highlight">B.</div>
                                 <div class="p-2 bd-highlight">Penurunan berat badan selamat 3 bulan terakhir</div>
                               </div>
-                              <div class="d-flex flex-row bd-highlight fw-bold mb-3">
+                              <div class="d-flex flex-row bd-highlight mb-3">
                                 <div class="p-3 bd-highlight"></div>
                                 <div class="p-2 bd-highlight">
-                                  <div class="input-group mb-3">
-                                    <select class="form-select form-select-sm" aria-label="Default select example">
-                                      <option selected>Pilih Jawaban</option>
-                                      <option value="0">0 = penurunan berat badan lebih dari 3 kg</option>
-                                      <option value="1">1 = tidak tahu</option>
-                                      <option value="2">2 = penurunan berat badan antara 1 hingga 3 kg</option>
-                                      <option value="3">3 = tidak ada penurunan berat badan</option>
-                                    </select>
-                                  </div>
+                                  0 = penurunan berat badan lebih dari 3 kg <br>
+                                  1 = tidak tahu <br>
+                                  2 = penurunan berat badan antara 1 hingga 3 kg <br>
+                                  3 = tidak ada penurunan berat badan <br>
+                                </div>
+                              </div>
+                              <div class="d-flex flex-row bd-highlight mb-3">
+                                <div class="p-3 bd-highlight"></div>
+                                <div class="p-2 bd-highlight">
+                                  <input type="number" class="form-control" id="num2" placeholder="isikan skor. contoh : 0">
                                 </div>
                               </div>
                               <hr>
@@ -147,17 +149,18 @@
                                 <div class="p-2 bd-highlight">C.</div>
                                 <div class="p-2 bd-highlight">Mobilitas</div>
                               </div>
-                              <div class="d-flex flex-row bd-highlight fw-bold mb-3">
+                              <div class="d-flex flex-row bd-highlight mb-3">
                                 <div class="p-3 bd-highlight"></div>
                                 <div class="p-2 bd-highlight">
-                                  <div class="input-group mb-3">
-                                    <select class="form-select form-select-sm" aria-label="Default select example">
-                                      <option selected>Pilih Jawaban</option>
-                                      <option value="0">0 = terbatas di tempat tidur atau kursi</option>
-                                      <option value="1">1 = mampu bangun dari tempat tidur/kursi tetapi tidak bepergian ke luar rumah</option>
-                                      <option value="2">2 = dapat bepergian ke luar rumah</option>
-                                    </select>
-                                  </div>
+                                  0 = terbatas di tempat tidur atau kursi <br>
+                                  1 = mampu bangun dari tempat tidur/kursi tetapi tidak bepergian ke luar rumah <br>
+                                  2 = dapat bepergian ke luar rumah <br>
+                                </div>
+                              </div>
+                              <div class="d-flex flex-row bd-highlight mb-3">
+                                <div class="p-3 bd-highlight"></div>
+                                <div class="p-2 bd-highlight">
+                                  <input type="number" class="form-control" id="num3" placeholder="isikan skor. contoh : 0">
                                 </div>
                               </div>
                               <hr>
@@ -165,16 +168,17 @@
                                 <div class="p-2 bd-highlight">D.</div>
                                 <div class="p-2 bd-highlight">Menderita tekanan psikologis atau penyakit yang berat dalam 3 bulan terakhir </div>
                               </div>
-                              <div class="d-flex flex-row bd-highlight fw-bold mb-3">
+                              <div class="d-flex flex-row bd-highlight mb-3">
                                 <div class="p-3 bd-highlight"></div>
                                 <div class="p-2 bd-highlight">
-                                  <div class="input-group mb-3">
-                                    <select class="form-select form-select-sm" aria-label="Default select example">
-                                      <option selected>Pilih Jawaban</option>
-                                      <option value="0">0 = ya</option>
-                                      <option value="2">2 = tidak</option>
-                                    </select>
-                                  </div>
+                                  0 = ya <br>
+                                  2 = tidak <br>
+                                </div>
+                              </div>
+                              <div class="d-flex flex-row bd-highlight mb-3">
+                                <div class="p-3 bd-highlight"></div>
+                                <div class="p-2 bd-highlight">
+                                  <input type="number" class="form-control" id="num4" placeholder="isikan skor. contoh : 0">
                                 </div>
                               </div>
                               <hr>
@@ -182,17 +186,18 @@
                                 <div class="p-2 bd-highlight">E.</div>
                                 <div class="p-2 bd-highlight">Gangguan neuropsikologis</div>
                               </div>
-                              <div class="d-flex flex-row bd-highlight fw-bold mb-3">
+                              <div class="d-flex flex-row bd-highlight mb-3">
                                 <div class="p-3 bd-highlight"></div>
                                 <div class="p-2 bd-highlight">
-                                  <div class="input-group mb-3">
-                                    <select class="form-select form-select-sm" aria-label="Default select example">
-                                      <option selected>Pilih Jawaban</option>
-                                      <option value="0">0 = depresi berat atau kepikunan berat</option>
-                                      <option value="1">1 = kepikunan ringan</option>
-                                      <option value="2">2 = tidak ada gangguan psikologis</option>
-                                    </select>
-                                  </div>
+                                  0 = depresi berat atau kepikunan berat <br>
+                                  1 = kepikunan ringan <br>
+                                  2 = tidak ada gangguan psikologis <br>
+                                </div>
+                              </div>
+                              <div class="d-flex flex-row bd-highlight mb-3">
+                                <div class="p-3 bd-highlight"></div>
+                                <div class="p-2 bd-highlight">
+                                  <input type="number" class="form-control" id="num5" placeholder="isikan skor. contoh : 0">
                                 </div>
                               </div>
                               <hr>
@@ -200,32 +205,37 @@
                                 <div class="p-2 bd-highlight">F.</div>
                                 <div class="p-2 bd-highlight">Indeks Massa Tubuh (IMT) (berat dalam kg)/(tinggi dalam m)</div>
                               </div>
-                              <div class="d-flex flex-row bd-highlight fw-bold mb-3">
+                              <div class="d-flex flex-row bd-highlight mb-3">
                                 <div class="p-3 bd-highlight"></div>
                                 <div class="p-2 bd-highlight">
-                                  <div class="input-group mb-3">
-                                    <select class="form-select form-select-sm" aria-label="Default select example">
-                                      <option selected>Pilih Jawaban</option>
-                                      <option value="0">0 = IMT kurang dari 19 (IMT < 19)</option>
-                                      <option value="1">1 = IMT 19 hingga kurang dari 21 (IMT : 19 hingga < 21)</option>
-                                      <option value="2">2 = IMT 21 hingga kurang dari 23 (IMT : 21 hingga < 23)</option>
-                                      <option value="3">3 = IMT 23 atau lebih (IMT > 23)</option>
-                                    </select>
-                                  </div>
+                                  0 = IMT kurang dari 19 (IMT < 19) <br>
+                                  1 = IMT 19 hingga kurang dari 21 (IMT : 19 hingga < 21) <br>
+                                  2 = IMT 21 hingga kurang dari 23 (IMT : 21 hingga < 23) <br>
+                                  3 = IMT 23 atau lebih (IMT > 23) <br>
+                                </div>
+                              </div>
+                              <div class="d-flex flex-row bd-highlight mb-3">
+                                <div class="p-3 bd-highlight"></div>
+                                <div class="p-2 bd-highlight">
+                                  <input type="number" class="form-control" id="num6" placeholder="isikan skor. contoh : 0">
                                 </div>
                               </div>
                               <hr>
                               <div class="btns-group text-center text-md-end">
                                 <a href="#" class="btn btn-prev btn-danger shadow lift me-1 mb-3">Kembali</a>
-                                <input type="submit" value="Kirim" class="btn btn-danger shadow lift me-1 mb-3" onclick="callvalue()"/>
+                                <a href="#" class="btn btn-next btn-danger shadow lift me-1 mb-3" id="hitung">Kirim</a>
                               </div>
+                              
                             </div>
                             <div class="mb-3 form-step">
-                            
-                            <div class="btns-group">
-                                <a href="#" class="btn btn-prev">Previous</a>
-                                <input type="button" value="Next" class="btn" onclick="callvalue()"/>
-                            </div>
+                              <div class="hasil">
+                                <p>Skor Anda adalah</p>
+                                <div id="hasil">00.00</div>
+                                <p class="komentar"></p>
+                              </div>
+                              <div class="btns-group text-md-end">
+                                <a href="/" class="btn btn-next btn-danger shadow lift me-1 mb-3">Selesai</a>
+                              </div>
                             </div>
                             
                           </form>
@@ -249,6 +259,9 @@
 
       <!-- Process Bar -->
       <script src="{{url_for('static', filename='js/process.js')}}"></script>
+
+      <!-- Jumlah Skor -->
+      <script src="{{url_for('static', filename='js/skor.js')}}"></script>
       
       <!-- Sweet Alert -->
       <script src="{{url_for('static', filename='js/alert.js')}}"></script>
@@ -260,8 +273,6 @@
       <!-- AOS -->
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script src="{{url_for('static', filename='js/aos.js')}}"></script>
-
-      <!-- Jumlah Skor-->
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
