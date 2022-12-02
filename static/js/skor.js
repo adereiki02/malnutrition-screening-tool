@@ -8,12 +8,7 @@ btn.addEventListener("click", function () {
   let num5 = document.querySelector("#num5").value;
   let num6 = document.querySelector("#num6").value;
 
-  if (num1 == "" || num2 == "" || num3 == "" || num4 == "" || num5 == "" || num6 == "") {
-    alert("Kolom tidak boleh kosong!");
-    return;
-  }
-
-  // skor = bb dalam KG / (tb dalam m * tb dalam m)
+  // menghitung skor malnutrisi
 
   x = 1;
   

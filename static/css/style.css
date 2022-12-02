@@ -160,7 +160,7 @@ ul li.active a {
 
 /* Progress bar dan Form */
 #form {
-  padding-top: 7rem;
+  padding-top: 8rem;
   padding-bottom: 5rem;
 }
 
@@ -171,7 +171,7 @@ ul li.active a {
 .progressbar {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   counter-reset: step;
   margin: 2rem 0 4rem;
 }
