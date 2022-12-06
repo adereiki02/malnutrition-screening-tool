@@ -8,17 +8,25 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-#form
-@app.route('/form')
-def form():
-    return render_template('form.html')
+#anak
+@app.route('/form-anak')
+def anak():
+    return render_template('form-anak.html')
+
+#dewasa
+@app.route('/form-dewasa')
+def dewasa():
+    return render_template('form-dewasa.html')
+
+#lansia
+@app.route('/form-lansia')
+def lansia():
+    return render_template('form-lansia.html')
 
 #imt
 @app.route('/imt')
 def imt():
     return render_template('imt.html')
-
-
 
 
 if __name__ == "__main__":

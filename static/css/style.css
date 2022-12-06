@@ -8,11 +8,11 @@
 }
 
 a:hover {
-  color: #DD5353;
+  color: #E64848;
 }
 
 ul li.active a {
-  background: #DD5353;
+  background: #E64848;
   color: #262626;
   border-radius: 5px;
 }
@@ -20,18 +20,40 @@ ul li.active a {
 #tentang {
   color: #ffffff;
   padding-top: 5rem;
-  background-color: #DD5353;
+  background-color: #E64848;
 }
 
 #profilkami {
   padding-top: 5rem;
+  background-color: #E64848;
+}
+
+#layanan {
+  padding-top: 5rem;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.carousel-inner {
+  padding: 1em;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #E64848;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .card {
   box-shadow: 0 0 30px rgb(0, 0, 0, 0.5);
   overflow: hidden;
   border-bottom: 15px;
-  cursor: pointer;
 }
 
 .card-body {
@@ -39,7 +61,6 @@ ul li.active a {
 }
 
 .img1 img {
-  height: 200px;
   width: 100%;
 }
 
@@ -57,7 +78,7 @@ ul li.active a {
 }
 
 .card:hover .img2 img {
-  border-color: #DD5353;
+  border-color: #E64848;
   transition: .7s;
 }
 
@@ -71,7 +92,7 @@ ul li.active a {
   font-weight: 900;
   font-size: 20px;
   margin: 0 0 20px;
-  color: #DD5353;
+  color: #E64848;
 }
 
 .main-text p {
@@ -112,27 +133,27 @@ ul li.active a {
   color: #fff;
 }
 .icon .fa-instagram{
-  color: #DD5353;
+  color: #E64848;
 }
 .ig:hover{
-  background: #DD5353;
+  background: #E64848;
 }
 
 .icon .fa-linkedin-in{
-  color: #DD5353;
+  color: #E64848;
 }
 .lnk:hover{
-  background: #DD5353;
+  background: #E64848;
 }
 
 .icon .fa-arrow-left{
-  color: #DD5353;
+  color: #E64848;
 }
 .icon .fa-arrow-right{
-  color: #DD5353;
+  color: #E64848;
 }
 .kembali:hover {
-  background: #DD5353;
+  background: #E64848;
 }
 
 .imt{
@@ -153,9 +174,7 @@ ul li.active a {
 
 
 #kontak {
-  color: #ffffff;
   padding-top: 5rem;
-  background-color: #DD5353;
 }
 
 /* Progress bar dan Form */
@@ -165,7 +184,7 @@ ul li.active a {
 }
 
 :root {
-  --primary-color: #DD5353;
+  --primary-color: #E64848;
 }
 
 .progressbar {
@@ -247,10 +266,22 @@ ul li.active a {
   box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
 }
 
+/* table */
+table {
+  border-collapse: collapse;
+}
+tbody, thead {
+  border: 1px solid black;
+}
+thead {
+  background-color: #E64848;
+  color: white;
+}
+
 /* BMI Calculator */
 #bmi {
   padding-top: 7rem;
-  background: #DD5353;
+  background: #E64848;
 }
 
 .content {
@@ -276,7 +307,7 @@ ul li.active a {
 .input input {
   outline: none;
   border: none;
-  border-bottom: 1px solid #DD5353;
+  border-bottom: 1px solid #E64848;
   width: 60%;
   text-align: center;
   font-size: 28px;
@@ -298,7 +329,7 @@ ul li.active a {
 .hasil #hasil {
   font-size: 36px;
   font-weight: 900;
-  color: #DD5353;
+  color: #E64848;
   background-color: #eaeaea;
   display: inline-block;
   padding: 7px 20px;
@@ -308,6 +339,6 @@ ul li.active a {
 }
 
 #komentar {
-  color: #DD5353;
+  color: #E64848;
   font-weight: 800;
 }
