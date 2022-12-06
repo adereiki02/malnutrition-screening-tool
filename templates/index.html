@@ -5,7 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Skrinning Malnutrisi</title>
+    <title>Vector Skrining</title>
+    
+    <!-- Logo -->
+    <link rel="icon" href="{{url_for('static', filename='images/header/VectorLogo.png')}}" type="image/x-icon">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
@@ -47,9 +50,6 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#profilkami">Profil Kami</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#kontak">Kontak</a>
             </li>
           </ul>
         </div>
@@ -158,7 +158,7 @@
                       <div class="main-text">
                         <h2>Form Skrining</h2>
                         <h3 class="fw-bold" style="font-size: medium; padding-bottom: 5px;">Dewasa</h3>
-                        <p>Isi form dengan klik tombol di bawah ini untuk mengetahui skor malnutrisi untuk Pria dan Wanita dewasa.</p>
+                        <p>Isi form dengan klik tombol di bawah ini untuk mengetahui skor malnutrisi Anda.</p>
                         <a href="/form-dewasa" class="btn btn-danger">Tes Sekarang!</a>
                       </div>
                     </div>
@@ -346,92 +346,35 @@
             </div>
         </div>
     </div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#ffffff"
-          fill-opacity="1"
-          d="M0,224L34.3,197.3C68.6,171,137,117,206,85.3C274.3,53,343,43,411,80C480,117,549,203,617,224C685.7,245,754,203,823,176C891.4,149,960,139,1029,138.7C1097.1,139,1166,149,1234,128C1302.9,107,1371,53,1406,26.7L1440,0L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
-        ></path>
-      </svg>
     </section>
     <!-- Akhir Projects -->
 
     <!-- kontak -->
     <section id="kontak">
       <div class="container">
-        <div class="row text-center">
-          <div class="col mb-3">
-            <h2 class="fw-bold text-danger">Kontak</h2>
-          </div>
-        </div>
-        <div class="row justify-content-between">
-          <div class="col-md-5 mb-3">
-            <div class="col fw-bold text-center">
-              <p>Terhubung dengan Kami</p>
-            </div>
-            <p>
-              Tetap terhubung dengan kami dengan menghubungi kontak yang tertera di bawah ini.
-            </p>
-            <div class="row row-cols-2">
-              <div class="col-2">
-                <i class="bi bi-person-fill"></i>
-              </div>
-              <div class="col-10">
-                <p>
-                  <b>Nama</b> <br />
-                  Vector
-                </p>
-              </div>
-              <div class="col-2">
-                <i class="bi bi-geo-alt-fill"></i>
-              </div>
-              <div class="col-10">
-                <p>
-                  <b>Alamat</b> <br />
-                  Jl. ...
-                </p>
-              </div>
-              <div class="col-2">
-                <i class="bi bi-envelope-fill"></i>
-              </div>
-              <div class="col">
-                <p>
-                  <b>Email</b> <br />
-                  vector@gmail.com
-                </p>
-              </div>
-            </div>
+        <div class="row justify-content-evenly">
+          <div class="col-md-2 mb-3 text-center">
+            <img style="width: 115px;" src="{{url_for('static', filename='images/header/VectorLogo.png')}}" alt="">
           </div>
           <div class="col-md-5 mb-3">
-            <div class="col fw-bold text-center">
-              <p>Hubungi Kami</p>
-            </div>
-            <form>
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Alamat Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                <div id="commentHelp" class="form-text text-white">Kami tidak akan menyebarkan alamat email Anda kepada orang lain.</div>
-              </div>
-              <div class="mb-3">
-                <label for="exampleInputComment" class="form-label">Komentar</label>
-                <input type="text" class="form-control" id="exampleInputComment" aria-describedby="commentHelp" />
-              </div>
-              <button type="submit" class="btn btn-danger">Kirim</button>
-            </form>
+            <h4 class="fw-bold">Vector</h4>
+            Final Project || Chairos Academy<br>
+            Gg. Ontoseno No. 19C || Ds. Karangjambe<br>
+            Kec. Banguntapan || Kab. Bantul<br>
+            Yogyakarta || 55198<br>
+          </div>
+          <div class="col-md-5 mb-3">
+            <h7 class="fw-bold">Hubungi Kami</h7>
+            <ul>
+              <li>Email : vector_andalusia@gmail.com</li>
+              <li>Phone : (021) 242 96775</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
     <!-- Akhir kontak -->
 
-    <!-- Footer -->
-    <footer class="text-white text-center pb-3" style="background-color: #E64848">
-      <br>
-      <p>
-        &copy; Vector, 2022. All right reserved
-      </p>
-    </footer>
-    <!-- Akhir Footer -->
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/b356ad9dc8.js" crossorigin="anonymous"></script>
